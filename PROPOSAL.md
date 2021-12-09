@@ -19,7 +19,7 @@ The robot could be moved around the world using a controller
 ## Milestones
 - [x] Complete this proposal document. 
 - [x] Get the number plate recognition code to work
-- [ ] Get the tele-op bot style implementation to work with the character recognition code
+- [x] Get the tele-op bot style implementation to work with the character recognition code
 - [ ] Test the code out by feeding it some basic number plates to see if it actually returns the correct character values
 - [ ] Generate a parking lot world in Gazebo
 - [ ] Get the robot to move in the parking lot using a controller (?)
