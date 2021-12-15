@@ -82,7 +82,7 @@ rosrun plate_recog ros_plate_recog.py
 </TR>
 <TR>
     <TD>World is generated<TD>
-    <TD>50%(i could generate a world with some screenshots of cars with plates but could'nt actually get real cars with plates to be generated)
+    <TD>50%(i could generate a world with some screenshots of cars with plates but could'nt actually get real cars with plates to be generated)</TD>
  </TR>
  <TR>
     <TD>Robot moves around world and recognises plates</TD>
