@@ -1,0 +1,318 @@
+<?xml version="1.0" encoding="utf-8"?>
+<sdf version="1.6">
+  <world name="imav_world">
+    <model name="ground_plane">
+      <static>1</static>
+      <link name="link">
+        <collision name="collision">
+          <geometry>
+            <plane>
+              <normal>0 0 1</normal>
+              <size>100 100</size>
+            </plane>
+          </geometry>
+          <surface>
+            <contact>
+              <collide_bitmask>65535</collide_bitmask>
+              <ode/>
+            </contact>
+            <friction>
+              <ode>
+                <mu>100</mu>
+                <mu2>50</mu2>
+              </ode>
+              <torsional>
+                <ode/>
+              </torsional>
+            </friction>
+            <bounce/>
+          </surface>
+          <max_contacts>10</max_contacts>
+        </collision>
+        <visual name="visual">
+          <cast_shadows>0</cast_shadows>
+          <geometry>
+            <plane>
+              <normal>0 0 1</normal>
+              <size>100 100</size>
+            </plane>
+          </geometry>
+          <material>
+            <script>
+              <uri>file://media/materials/scripts/gazebo.material</uri>
+              <name>Gazebo/Grey</name>
+            </script>
+          </material>
+        </visual>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+    </model>
+    <light name="sun" type="directional">
+      <cast_shadows>1</cast_shadows>
+      <pose>0 10 0 0 0 -1.57079632679</pose>
+      <diffuse>0.8 0.8 0.8 1</diffuse>
+      <specular>0.2 0.2 0.2 1</specular>
+      <attenuation>
+        <range>1000</range>
+        <constant>0.9</constant>
+        <linear>0.01</linear>
+        <quadratic>0.001</quadratic>
+      </attenuation>
+      <direction>-0.5 0.1 -0.9</direction>
+    </light>
+    <physics type="ode">
+      <max_step_size>0.001</max_step_size>
+      <real_time_factor>1</real_time_factor>
+      <real_time_update_rate>1000</real_time_update_rate>
+    </physics>
+    <gravity>0 0 -9.8</gravity>
+    <gui fullscreen="0">
+      <camera name="user_camera">
+        <pose>1.49016 -3.72367 3.62379 -2.88294e-17 0.273797 1.4042</pose>
+        <view_controller>orbit</view_controller>
+      </camera>
+    </gui>
+    <scene>
+      <ambient>0.4 0.4 0.4 1</ambient>
+      <background>0.7 0.7 0.7 1</background>
+      <sky>
+        <clouds>
+          <speed>12</speed>
+        </clouds>
+      </sky>
+      <shadows>1</shadows>
+      <grid>0</grid>
+    </scene>
+
+    <model name="plate_1">
+      <pose frame=''>-2.07891 -5.57613 0.049993 2e-06 -1e-06 -1e-06</pose>
+      <static>true</static>
+      <link name="plate_1">
+        <visual name="visual">
+          <pose>0 0 0 0 -0 0</pose>
+          <geometry>
+            <mesh>
+              <uri>file:///home/khan/catkin_ws/src/plate_recog/model/mesh/plate_1.dae</uri>
+            </mesh>
+          </geometry>
+        </visual>
+        <collision name="collision">
+          <pose>0 0 0 0 -0 0</pose>
+          <geometry>
+            <mesh>
+              <uri>file:///home/khan/catkin_ws/src/plate_recog/model/mesh/plate_1.dae</uri>
+            </mesh>
+          </geometry>
+        </collision>
+      </link>
+    </model>
+
+    <model name="plate_2">
+      <pose frame=''>-1.97249 -2.33997 0.099991 -1e-06 -0 -2e-06</pose>
+      <static>true</static>
+      <link name="plate_2">
+        <visual name="visual">
+          <pose>0 0 0 0 -0 0</pose>
+          <geometry>
+            <mesh>
+              <uri>file:///home/khan/catkin_ws/src/plate_recog/model/mesh/plate_2.dae</uri>
+            </mesh>
+          </geometry>
+        </visual>
+        <collision name="collision">
+          <pose>0 0 0 0 -0 0</pose>
+          <geometry>
+            <mesh>
+              <uri>file:///home/khan/catkin_ws/src/plate_recog/model/mesh/plate_2.dae</uri>
+            </mesh>
+          </geometry>
+        </collision>
+      </link>
+    </model>
+
+    <model name="plate_3">
+      <pose frame=''>4.01377 5.05763 0.049996 -1e-06 -3e-06 -0</pose>
+      <static>true</static>
+      <link name="plate_3">
+        <visual name="visual">
+          <pose>0 0 0 0 -0 0</pose>
+          <geometry>
+            <mesh>
+              <uri>file:///home/khan/catkin_ws/src/plate_recog/model/mesh/plate_3.dae</uri>
+            </mesh>
+          </geometry>
+        </visual>
+        <collision name="collision">
+          <pose>0 0 0 0 -0 0</pose>
+          <geometry>
+            <mesh>
+              <uri>file:///home/khan/catkin_ws/src/plate_recog/model/mesh/plate_3.dae</uri>
+            </mesh>
+          </geometry>
+        </collision>
+      </link>
+    </model>
+
+    <model name="plate_4">
+      <pose frame=''>0.234058 4.92382 -2e-06 2e-06 8e-06 0</pose>
+      <static>true</static>
+      <link name="plate_4">
+        <visual name="visual">
+          <pose>0 0 0 0 -0 0</pose>
+          <geometry>
+            <mesh>
+              <uri>file:///home/khan/catkin_ws/src/plate_recog/model/mesh/plate_4.dae</uri>
+            </mesh>
+          </geometry>
+        </visual>
+        <collision name="collision">
+          <pose>0 0 0 0 -0 0</pose>
+          <geometry>
+            <mesh>
+              <uri>file:///home/khan/catkin_ws/src/plate_recog/model/mesh/plate_4.dae</uri>
+            </mesh>
+          </geometry>
+        </collision>
+      </link>
+    </model>
+
+    <model name="plate_5">
+      <pose frame=''>3.04728 -2.43164 -1e-06 -7e-06 2e-06 -0</pose>
+      <static>true</static>
+      <link name="plate_5">
+        <visual name="visual">
+          <pose>0 0 0 0 -0 0</pose>
+          <geometry>
+            <mesh>
+              <uri>file:///home/khan/catkin_ws/src/plate_recog/model/mesh/plate_5.dae</uri>
+            </mesh>
+          </geometry>
+        </visual>
+        <collision name="collision">
+          <pose>0 0 0 0 -0 0</pose>
+          <geometry>
+            <mesh>
+              <uri>file:///home/khan/catkin_ws/src/plate_recog/model/mesh/plate_5.dae</uri>
+            </mesh>
+          </geometry>
+        </collision>
+      </link>
+    </model>
+
+
+
+
+    <!--actor name="plate_2">
+      <pose frame=''>-1.97249 -2.33997 0.099991 -1e-06 -0 -2e-06</pose>
+      <link name="plate_2">
+        <visual name="visual">
+          <pose>3e-06 3e-06 0 0 -0 0</pose>
+          <geometry>
+            <mesh>
+              <uri>file:///home/jhala/catkin_ws/src/solar_panal_washing/meshes/stand.obj</uri>
+            </mesh>
+          </geometry>
+        </visual>
+        <collision name="collision">
+          <pose>0 -0.3 0.05 1.57 0 0</pose>
+          <geometry>
+            <mesh>
+              <uri>file:///home/jhala/catkin_ws/src/solar_panal_washing/meshes/stand.obj</uri>
+            </mesh>
+          </geometry>
+        </collision>
+      </link>
+
+      <link name="nozel_link_1">
+        <visual name="visual">
+          <pose>0 0 0.8 3.14 0 1.57</pose>
+          <geometry>
+            <mesh>
+              <uri>file:///home/jhala/catkin_ws/src/solar_panal_washing/meshes/nozel.stl</uri>
+            </mesh>
+          </geometry>
+	<plugin name="model_push" filename="libmyplugin.so"/>
+        </visual>
+        <collision name="collision">
+          <pose>0 0 0.8 3.14 0 1.57</pose>
+          <geometry>
+            <mesh>
+              <uri>file:///home/jhala/catkin_ws/src/solar_panal_washing/meshes/nozel.stl</uri>
+            </mesh>
+          </geometry>
+        </collision>
+      </link>
+
+      <script>
+        <loop>true</loop>
+        <auto_start>true</auto_start>
+        <trajectory id="0" type="square">
+          <waypoint>
+            <time>0.0</time>
+            <pose>0.26 0 0 0 0 0</pose>
+          </waypoint>
+          <waypoint>
+            <time>3.0</time>
+            <pose>-0.26 0 0 0 0 0</pose>
+          </waypoint>
+          <waypoint>
+            <time>6.0</time>
+            <pose>0.26 0 0 0 0 0</pose>
+          </waypoint>
+        </trajectory>
+      </script>
+    </actor>
+
+
+
+    <model name="plate">
+      <static>true</static>
+      <link name="solar_plate">
+        <visual name="visual">
+          <pose>0 0.08 0.62 1.57 0  0</pose>
+          <geometry>
+            <mesh>
+              <uri>file:///home/jhala/catkin_ws/src/solar_panal_washing/meshes/paal.obj</uri>
+            </mesh>
+          </geometry>
+        </visual>
+        <collision name="collision">
+          <pose>0 0.08 0.62 1.57 0  0</pose>
+          <geometry>
+            <mesh>
+              <uri>file:///home/jhala/catkin_ws/src/solar_panal_washing/meshes/paal.obj</uri>
+            </mesh>
+          </geometry>
+        </collision>
+      </link>
+    </model>
+
+    <model name="pipe">
+      <static>true</static>
+      <link name="pipe_link">
+        <visual name="visual">
+          <pose>0.12 -0.1 0.27 90 -11.3 51.6</pose>
+          <geometry>
+            <mesh>
+              <uri>file:///home/jhala/catkin_ws/src/solar_panal_washing/meshes/filter_bottle.STL</uri>
+            </mesh>
+          </geometry>
+        </visual>
+        <collision name="collision">
+          <pose>0.12 -0.1 0.27 90 -11.3 51.6</pose>
+          <geometry>
+            <mesh>
+              <uri>file:///home/jhala/catkin_ws/src/solar_panal_washing/meshes/filter_bottle.STL</uri>
+            </mesh>
+          </geometry>
+        </collision>
+      </link>
+    </model-->
+
+
+
+  </world>
+</sdf>
+
