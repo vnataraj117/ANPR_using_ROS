@@ -1,5 +1,0 @@
-pip install pytesseract==0.3.5
-
-roslaunch plate_recog turtlebot3_parking.launch
-
-rosrun plate_recog ros_plate_recog.py
